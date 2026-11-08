@@ -45,7 +45,12 @@ export default function StationDetail({
         <div className="min-w-0 grow">
           <h2 className="truncate text-base font-semibold">{station.name}</h2>
           <p className="truncate text-xs opacity-60">
-            {[station.address, `${station.postalCode} ${station.city}`.trim()]
+            {[
+              // le flux donne pas de nom : on retombe sur l'adresse, donc
+              // inutile de la répéter juste en dessous
+              station.address === station.name ? null : station.address,
+              `${station.postalCode} ${station.city}`.trim(),
+            ]
               .filter(Boolean)
               .join(" · ")}
           </p>

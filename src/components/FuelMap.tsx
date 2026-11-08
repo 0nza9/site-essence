@@ -117,9 +117,7 @@ export default function FuelMap() {
     <div className="flex h-dvh flex-col overflow-hidden lg:flex-row">
       {/* --- Barre mobile --- */}
       <header className="flex items-center gap-2 border-b border-base-300 bg-base-100 px-3 py-2 lg:hidden">
-        <h1 className="grow text-sm font-semibold">
-          <span aria-hidden="true">⛽</span> FuelMap
-        </h1>
+        <h1 className="grow text-sm font-semibold">FuelMap</h1>
         {stats && (
           <span className="tabular text-xs opacity-60">
             {formatCount(stats.count)} stations
@@ -145,9 +143,7 @@ export default function FuelMap() {
         ].join(" ")}
       >
         <div className="hidden items-center gap-2 border-b border-base-300 px-4 py-3 lg:flex">
-          <h1 className="grow text-base font-semibold">
-            <span aria-hidden="true">⛽</span> FuelMap
-          </h1>
+          <h1 className="grow text-base font-semibold">FuelMap</h1>
           <ThemeToggle />
           <button
             type="button"
